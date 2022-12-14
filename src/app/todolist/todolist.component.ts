@@ -20,21 +20,13 @@ export class TodolistComponent {
   }
 
   onCompletedChanged(id: number, event: any){
-    const isSelected = event.target.checked;
-    this.presenter.setCompleted(id,isSelected);
   }
 
   onDelete(id: number) {
-    if(!confirm(`Are you sure?`)){
-      return;
-    }
-    this.presenter.removeItem(id);
   }
 
   AddItem() {
-    this.presenter.addItem(this.newTitle,this.newContent);
-    this.newTitle = "";
-    this.newContent = "";
+
   }
 
 }
